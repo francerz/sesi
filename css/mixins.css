@@ -1,0 +1,30 @@
+.w1 {
+  flex-grow: 1;
+  flex-basis: 168px;
+}
+
+.w2 {
+  flex-grow: 2;
+  flex-basis: 336px;
+}
+
+.w3 {
+  flex-grow: 3;
+  flex-basis: 504px;
+}
+
+.w4 {
+  flex-grow: 4;
+  flex-basis: 672px;
+}
+
+.w5 {
+  flex-grow: 5;
+  flex-basis: 840px;
+}
+
+.w6 {
+  flex-grow: 6;
+  flex-basis: 1008px;
+}
+/*# sourceMappingURL=mixins.css.map */

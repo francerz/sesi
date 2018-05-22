@@ -1,0 +1,34 @@
+/// Mixin to prefix a property
+/// @author Hugo Giraudel
+/// @param {String} $property - Property name
+/// @param {*} $value - Property value
+/// @param {List} $prefixes (()) - List of prefixes to print
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+$small-width: 636px;
+$large-width: 1008px;
+
+@mixin respond-to($media) {
+    @if $media == small {
+        @media only screen and (max-width: 572px) { @content; }
+    }
+    @else if $media == medium {
+        @media only screen and (min-width: 672px) { @content; }
+    }
+    @else if $media == large {
+        @media only screen and (min-width: $large-width) { @content; }
+    }
+}
+
+.w1 { flex-grow: 1; flex-basis: 168px; }
+.w2 { flex-grow: 2; flex-basis: 336px; }
+.w3 { flex-grow: 3; flex-basis: 504px; }
+.w4 { flex-grow: 4; flex-basis: 672px; }
+.w5 { flex-grow: 5; flex-basis: 840px; }
+.w6 { flex-grow: 6; flex-basis: 1008px; }

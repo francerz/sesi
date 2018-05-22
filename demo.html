@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="js/main.css" />
+    <script src="js/main.js"></script>
+    <script src="js/mq.genie.min.js"></script>
+</head>
+<body>
+    <header>
+        <div id='nav-bar'>
+            <div class='content-view'>
+                <nav id='main-nav' class='nav-view nv-top'>
+                    <a class='item' href='#'>Perfil</a>
+                    <a class='item' href='#'>Cartilla</a>
+                    <a class='item' href='#'>Familia</a>
+                    <a class='item' href='#'>Médicos</a>
+                    <a class='separator'></a>
+                    <a class='header'>Encabezado</a>
+                    <a href="#" class="item">Item1</a>
+                    <a href="#" class="item">Item2</a>
+                    <a href="#" class="item">Item3</a>
+                    <a href="#" class="item">Item4</a>
+                    <a href="#" class="item">Item5</a>
+                    <a href="#" class="item">Item6</a>
+                    <a href="#" class="item">Item7</a>
+                    <a href="#" class="item">Item8</a>
+                    <a href="#" class="item">Item9</a>
+                    <a href="#" class="item">Item10</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main style="height: 200vh">
+        <div class='content-view'>
+            <h1>Título de la página</h1>
+            <article>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit, primis quam lobortis consequat litora eget, neque suscipit mi ultrices
+                lectus luctus. Vehicula consequat integer lacinia class pulvinar congue gravida mus ultricies posuere laoreet, faucibus feugiat
+                fusce ullamcorper non auctor inceptos phasellus morbi ut. Id facilisi condimentum tempor nascetur placerat nulla tortor augue,
+                vulputate eleifend at cubilia nibh tincidunt habitant tellus, imperdiet enim venenatis primis sapien nunc conubia.
+                </p>
+                <p>Interdum senectus parturient vivamus cras lacus eu luctus habitasse laoreet, aliquet venenatis consequat tincidunt cubilia tortor
+                cum feugiat, ultricies facilisis porta nascetur sem suspendisse quisque penatibus. Imperdiet neque himenaeos habitant ullamcorper
+                morbi vehicula sed rhoncus, mi posuere etiam sapien sollicitudin phasellus dis lacinia massa, nunc suscipit nibh tempus et
+                fermentum vel. Sociis augue est morbi platea tempus nascetur consequat parturient penatibus, vitae per litora iaculis nibh
+                nostra suspendisse.
+                </p>
+                <a href='#'>Leer más...</a>
+            </article>
+            <div>
+                <button>Regular</button>
+                <button>Regular</button>
+                <button>Regular</button>
+                <button class='cta'>Principal</button>
+            </div>
+        </div>
+        <div class='panel'>
+            <div class='content-view'>
+                <h2>Subtítulo en panel</h2>
+                <button>Regular</button>
+                <button>Regular</button>
+                <button>Regular</button>
+                <button class='cta'>Principal</button>
+            </div>
+        </div>
+        <div class='content-view'>
+            <form class='form flex'>
+                <div class='input'>
+                    <label for='txt1'>Campo 1</label>
+                    <input type='text' id='txt1' name='txt1' placeholder="Placeholder" required autofocus />
+                </div>
+                <div class='input'>
+                    <label for='txt2'>Campo 2</label>
+                    <div class='fixed-input name:curp'>
+                        <input type='text' pattern='[A-Z]' />
+                        <input type='text' pattern='[A-Z]' />
+                        <input type='text' pattern='[A-Z]' />
+                        <input type='text' pattern='[A-Z]' />
+                        <input type='text' pattern='[0-9]' />
+                        <input type='text' pattern='[0-9]' />
+                        <input type='text' pattern='[0-1]' />
+                        <input type='text' pattern='[0-9]' />
+                        <input type='text' pattern='[0-3]' />
+                        <input type='text' pattern='[0-9]' />
+                        <input type='text' pattern='[HM]' />
+                        <input type='text' pattern='[A-Z]' />
+                        <input type='text' pattern='[A-Z]' />
+                        <input type='text' pattern='[A-Z]' />
+                        <input type='text' pattern='[A-Z]' />
+                        <input type='text' pattern='[A-Z]' />
+                        <input type='text' pattern='[A0-9]' />
+                        <input id='txt2' type='text' pattern='[0-9]' />
+                    </div>
+                </div>
+                <div class='input'>
+                    <label for='sel2'>Campo 2</label>
+                    <select id='sel2' name='sel2'>
+                        <option>Valor 1</option>
+                        <option>Valor 2</option>
+                        <option>Valor 3</option>
+                    </select>
+                </div>
+                <button type='reset'>Limpiar</button>
+                <button type='submit' class='cta'>Enviar</button>
+            </form>
+            <form class='form flex'>
+                <div class='input w1'>
+                    <label>Label 1-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w1'>
+                    <label>Label 1-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w1'>
+                    <label>Label 1-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w1'>
+                    <label>Label 1-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w1'>
+                    <label>Label 1-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w1'>
+                    <label>Label 1-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w6'>
+                    <label>Label 6-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w2'>
+                    <label>Label 2-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w2'>
+                    <label>Label 2-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w2'>
+                    <label>Label 2-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w3'>
+                    <label>Label 3-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w3'>
+                    <label>Label 3-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w4'>
+                    <label>Label 4-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w2'>
+                    <label>Label 2-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w2'>
+                    <label>Label 2-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w4'>
+                    <label>Label 4-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w1'>
+                    <label>Label 1-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w1'>
+                    <label>Label 1-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w3'>
+                    <label>Label 3-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w1'>
+                    <label>Label 1-6</label>
+                    <input type='text' />
+                </div>
+                <div class='input w1 inline-control'>
+                    <input id='chk-test' type='checkbox' />
+                    <label for='chk-test'>Esta checkbox</label>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

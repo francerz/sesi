@@ -1,0 +1,136 @@
+@import "mixins";
+
+%cmd-items-flow {
+    position: relative;
+    padding: 0px;
+    display: block;
+    box-sizing: border-box;
+}
+.header {
+    @extend %cmd-items-flow;
+    font-weight: bold;
+}
+.separator {
+    @extend %cmd-items-flow;
+    height: 1em;
+}
+.item {
+    @extend %cmd-items-flow;
+    text-decoration: none;
+}
+
+.nav-view {
+    overflow: hidden;
+    white-space: nowrap;
+
+    .more {
+        @extend %cmd-items-flow;
+        position: relative;
+        padding-right: 3ex !important;
+
+        &::before {
+            content: "Más";
+            display: inline;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            right: 1ex;
+            top: 50%;
+            width: 1ex;
+            height: 1ex;
+            margin-top: -0.75ex;
+            border: 1px solid white;
+            border-width: 0px 1px 1px 0px;
+            transform: rotate(45deg);
+        }
+    }
+
+    // Horizontally over the UI
+    &.nv-top {
+        %cmd-items-flow {
+            display: inline-block;
+        }
+        .separator {
+            border-left: 1px solid black;
+        }
+    }
+    // Left bar with max-width
+    &.nv-left {
+        max-width: 300px;
+    }
+    // Left bar with only icons
+    &.nv-compact {
+        width: 36px;
+    }
+    // Only hamburguer menu
+    &.nv-minimal {
+        
+    }
+    
+}
+.menu {
+    background: rgba(white, 0.9);
+    border: 1px solid rgba(white, 0.2);
+    position: fixed;
+    display: none;
+    box-shadow: 1.25px 2.5px 5px rgba(0,0,0,0.2);
+
+    .header,
+    .item,
+    .separator {
+        position: relative !important;
+        height: auto !important;
+        line-height: 1em !important;
+        display: block !important;
+        padding: 8px 28px 8px 36px  !important;
+        color: black !important;
+    }
+    .header {
+        font-size: 0.8em !important;
+    }
+    .item {
+        &:hover {
+            background: rgba(0, 110, 255, 0.3) !important;
+        }
+    }
+    .submenu {
+        &::after {
+            content: "";
+            right: 10px;
+            top: 10px;
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            transform: rotate(45deg);
+        }
+    }
+    .separator {
+        border: none !important;
+        height: 1px !important;
+        padding: 0px !important;
+        margin: 2px 1em !important;
+        border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+
+        &:first-child,
+        &:last-child {
+            display: none !important;
+        }
+    }
+
+    &.visible {
+        display: block;
+    }
+}
+
+@supports (-webkit-backdrop-filter: blur(20px)) {
+    #nav-bar {
+        @include prefix(backdrop-filter, blur(20px) brightness(40%) saturate(300%), webkit);
+    }
+    .menu {
+        background: rgba(white, 0.7);
+        @include prefix(backdrop-filter, blur(20px) saturate(120%), webkit); 
+    }
+}

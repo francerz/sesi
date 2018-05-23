@@ -1,0 +1,33 @@
+type Padecimiento {
+    nombre: String
+}
+type PoblacionDestino {
+    edad_minima: Int!
+    edad_maxima: Int!
+    sexo: Int!
+    padecimientos: [Padecimiento!]
+}
+type Recomendacion {
+    nombre: String
+    poblacion_destino: [PoblacionDestino]
+}
+type Antropometria {
+    fecha: DateTime
+    peso: Float
+    talla: Float
+    circunferencia: Float!
+}
+type Cartilla {
+    curp: String
+    nombres: String
+    apellido1: String
+    apellido2: String
+    fecha_nacimiento: DateTime
+    sexo: Int
+    padecimientos: [Padecimiento!]
+    familiares: [Familiar!]
+}
+type Familiar {
+    cartila: Cartilla
+    parentezco
+}

@@ -9,13 +9,32 @@ type PoblacionDestino {
 }
 type Recomendacion {
     nombre: String
+    tipo: String // Vacuna, orientacion, desparasitación
     poblacion_destino: [PoblacionDestino]
 }
+
 type Antropometria {
     fecha: DateTime
     peso: Float
     talla: Float
     circunferencia: Float!
+}
+
+type Familiar {
+    cartila: Cartilla
+    parentezco: String
+}
+type Filiacion {
+    institucion: Institucion
+    numero: String
+    titularidad: String
+    vigencia: []
+}
+type Vacuna {
+    nombre: String
+    enfermedad: String
+    dosis: String
+    edad: Int!
 }
 type Cartilla {
     curp: String
@@ -24,10 +43,7 @@ type Cartilla {
     apellido2: String
     fecha_nacimiento: DateTime
     sexo: Int
+    tipo_sangre: String!
     padecimientos: [Padecimiento!]
     familiares: [Familiar!]
-}
-type Familiar {
-    cartila: Cartilla
-    parentezco
 }

@@ -18,10 +18,11 @@ function redirect($path)
         header("Location: {$path}");
     } elseif (strpos($path, '//') == 0) {
         $path = ltrim($path, '/');
-        header("Location: {$_SERVER['HTTP_HOST']}/{$path}");
+        $schema = 'http';
+        header("Location: {$schema}://{$_SERVER['HTTP_HOST']}/{$path}");
     } else {
         $path = ltrim($path, '/');
-        header("Location: ".BASE_URL."{$path}");
+        header("Location: ".rtrim(BASE_URL,'/')."/{$path}");
     }
     exit;
 }

@@ -9,6 +9,9 @@ $color2: rgb(0, 97, 167);
 $color2-light: lighten($color2, $color-shift);
 $color2-dark: darken($color2, $color-shift);
 
+$color3: rgb(242,156,0);
+$color4: rgb(210,28,97);
+
 body {
     background: white;
     font-size: 14px;
@@ -19,7 +22,9 @@ body {
 a:link {
     color: $color1-dark;
 }
-button {
+button,
+.button {
+    text-decoration: none; 
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.8em;
@@ -49,13 +54,14 @@ button {
     background-color: $color2-dark;
     color: white;
 
-    button {
+    button,
+    .button {
         background-color: $color2-light;
         color: white;
-    }
-    button.cta {
-        background-color: $color1;
-        color: white;
+        &.cta {
+            background-color: $color1;
+            color: white;
+        }
     }
 }
 
@@ -181,7 +187,7 @@ button {
     }
     button,
     .button {
-        background: $color3;
+        // background: $color3;
         margin: 5px;
         box-sizing: border-box;
         height: 28px;
@@ -208,6 +214,9 @@ main {
     padding-top: 40px;
     h1 {
         font-weight: lighter;
+        background: linear-gradient(160deg, $color3, $color4 30%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 

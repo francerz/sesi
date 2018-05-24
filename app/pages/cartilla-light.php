@@ -1,7 +1,8 @@
 <?php mostrarStruct('top',['title'=>'Página de prueba']); ?>
 <?php mostrarStruct('header'); ?>
-<main>
+<main style='height:100vh; display:flex;justify-content:center; align-items:center;flex-wrap:wrap;'>
     <div class='content-view'>
+        <h3>Datos del paciente</h3>
         <h1><?=$cartilla->nombres?> <?=$cartilla->apellido1?> <?=$cartilla->apellido2?></h1>
 
         <p>Fecha de nacimiento: <?=$cartilla->fechaNacimiento?></p>

@@ -171,7 +171,9 @@ a:link {
   color: #007c2f;
 }
 
-button {
+button,
+.button {
+  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.8em;
@@ -185,16 +187,19 @@ button {
   transition: box-shadow 0.2s;
 }
 
-button:hover {
+button:hover,
+.button:hover {
   border-color: rgba(255, 255, 255, 0.5);
   box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-button:active {
+button:active,
+.button:active {
   box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3) inset;
 }
 
-button.cta {
+button.cta,
+.button.cta {
   background-color: #0061a7;
   color: white;
 }
@@ -206,12 +211,14 @@ button.cta {
   color: white;
 }
 
-.panel button {
+.panel button,
+.panel .button {
   background-color: #007fda;
   color: white;
 }
 
-.panel button.cta {
+.panel button.cta,
+.panel .button.cta {
   background-color: #00af43;
   color: white;
 }
@@ -336,20 +343,10 @@ button.cta {
   z-index: 100;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   color: white !important;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-}
-
-#nav-bar > .content-view {
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
 }
 
 #nav-bar button,
 #nav-bar .button {
-  background: #00e257;
   margin: 5px;
   box-sizing: border-box;
   height: 28px;
@@ -379,6 +376,9 @@ main {
 
 main h1 {
   font-weight: lighter;
+  background: linear-gradient(160deg, #f29c00, #d21c61 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 article {

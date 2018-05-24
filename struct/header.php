@@ -1,7 +1,7 @@
 <header>
     <div id='nav-bar'>
         <div class='content-view'>
-            <?php include(__DIR__.'/header_nav.php'); ?>
+            <?php mostrarStruct('header_nav'); ?>
         </div>
     </div>
 </header>

@@ -1,7 +1,16 @@
-<?php
+<?php include '../config.php'; ?>
+<?php mostrarStruct('top',['title'=>'Recomendaciones']); ?>
+<?php mostrarStruct('header'); ?>
+<main>
+    <div class='content-view'>
+        <h1>Recomendaciones personalizadas</h1>
+        <?php  echo consultarRecomendaciones();?>
+    </div>
+</main>
+<?php mostrarStruct('bottom'); 
 
-  function consultarRecomendaciones(){
-    require '../../config.php';
+function consultarRecomendaciones(){
+    //require '../../config.php';
     require ROOT_DIR.'/vendor/autoload.php';
     $cliente = new MongoDB\Client(MONGODB_PATH);
     $coleccionNombre="recomendaciones";

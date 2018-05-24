@@ -16,7 +16,7 @@ function redirect($path)
 {
     if (preg_match('/[a-z]+:.*/i', $path)) {
         header("Location: {$path}");
-    } elseif (strpos($path, '//') == 0) {
+    } elseif (strpos($path, '//') === 0) {
         $path = ltrim($path, '/');
         $schema = 'http';
         header("Location: {$schema}://{$_SERVER['HTTP_HOST']}/{$path}");

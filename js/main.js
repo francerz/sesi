@@ -89,6 +89,12 @@ function parseXInput(el) {
             }
         });
     }
+    var rgxName = /.*\bname\:\(([A-Za-z0-9_\-])\)\b.*/;
+    // var newName = rgxName.exec(el.className);
+    var input = document.createElement('input');
+    input.type='hidden';
+    // input.name = 
+    el.insertBefore(input, el.firstChild);
 }
 
 function updateLayout() {

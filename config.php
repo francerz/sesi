@@ -12,3 +12,16 @@ function mostrarTemplate($nombre,$vars = array()) {
     extract($vars);
     include ROOT_DIR."/templates/{$nombre}.php";
 }
+function redirect($path)
+{
+    if (preg_match('/[a-z]+:.*/i', $path)) {
+        header("Location: {$path}");
+    } elseif (strpos($path, '//') == 0) {
+        $path = ltrim($path, '/');
+        header("Location: {$_SERVER['HTTP_HOST']}/{$path}");
+    } else {
+        $path = ltrim($path, '/');
+        header("Location: ".BASE_URL."{$path}");
+    }
+    exit;
+}

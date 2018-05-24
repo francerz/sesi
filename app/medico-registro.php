@@ -34,7 +34,7 @@
                 <input id='txtPassword' type='password' name='password' required />
             </div>
             <div class='input w2'>
-                <label for='txtPassword2'>Confirmar contraeña:</label>
+                <label for='txtPassword2'>Confirmar contraseña:</label>
                 <input id='txtPassword2' type='password' required />
             </div>
             <div class='button-row'>

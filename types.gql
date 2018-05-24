@@ -44,6 +44,17 @@ type Cartilla {
     fecha_nacimiento: DateTime
     sexo: Int
     tipo_sangre: String!
+    pin: String
     padecimientos: [Padecimiento!]
     familiares: [Familiar!]
+}
+
+type CuentaCorreo {
+    correo: String
+    verificado: bool
+}
+type Usuario {
+    cartilla: Cartilla
+    correos: [CuentaCorreo]
+    contrasenia: String
 }

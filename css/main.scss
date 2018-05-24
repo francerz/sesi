@@ -127,6 +127,9 @@ button {
             }
         }
     }
+    .button-row {
+        text-align: center;
+    }
     &.flex {
         display: flex;
         flex-flow: wrap;

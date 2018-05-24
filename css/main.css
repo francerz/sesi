@@ -291,6 +291,10 @@ button.cta {
   bottom: 0.25em;
 }
 
+.form .button-row {
+  text-align: center;
+}
+
 .form.flex {
   display: flex;
   flex-flow: wrap;
@@ -332,6 +336,24 @@ button.cta {
   z-index: 100;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
   color: white !important;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+#nav-bar > .content-view {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+#nav-bar button,
+#nav-bar .button {
+  background: #00e257;
+  margin: 5px;
+  box-sizing: border-box;
+  height: 28px;
+  vertical-align: middle;
 }
 
 #main-nav .header, #main-nav .item {

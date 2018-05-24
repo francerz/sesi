@@ -28,6 +28,6 @@ function insertar()
         'fechaNacimiento' => $_POST['fechaNacimiento'],
         'password' => password_hash($_POST['password'], PASSWORD_DEFAULT)
     ));
-
-    header('app/usuario-registro.php');
+    
+    redirect('app/usuario-login.php');
 }

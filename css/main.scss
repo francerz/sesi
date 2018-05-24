@@ -169,6 +169,24 @@ button {
     z-index: 100;
     box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
     color: white !important;
+
+    // display: flex;
+    // flex-flow: row;
+    // justify-content: space-between;
+    
+    &>.content-view {
+        // display: flex;
+        // flex-flow: row;
+        // justify-content: space-between;
+    }
+    button,
+    .button {
+        background: $color3;
+        margin: 5px;
+        box-sizing: border-box;
+        height: 28px;
+        vertical-align: middle;
+    }
 }
 #main-nav {
     .header, .item {

@@ -1,0 +1,32 @@
+{
+    "nombre": "Examen Clínico de Mama",
+    "tipo": "Estudio",
+    "poblacion_destino": [
+        {
+            "edad_minima": 4025,
+            "sexo": 2
+        }
+    ]
+}
+
+{
+    "nombre": "Mastografía",
+    "tipo": "Estudio",
+    "poblacion_destino": [
+        {
+            "edad_minima": 4050,
+            "sexo": 2
+        }
+    ]
+}
+
+{
+    "nombre": "Papanicolaou",
+    "tipo": "Estudio",
+    "poblacion_destino": [
+        {
+            "edad_minima": 4025,
+            "sexo": 2
+        }
+    ]
+}

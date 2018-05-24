@@ -9,7 +9,7 @@ type PoblacionDestino {
 }
 type Recomendacion {
     nombre: String
-    tipo: String // Vacuna, orientacion, desparasitación
+    tipo: String // Vacuna, orientacion, desparasitación, estudio
     poblacion_destino: [PoblacionDestino]
 }
 

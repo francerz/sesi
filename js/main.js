@@ -36,6 +36,15 @@ function parseLayout() {
 }
 function parseXInput(el) {
     var backspaceTimeout, backspaceInterval;
+
+    var rgxName = /.*\bname:([A-Za-z0-9_\-]+)\b.*/;
+    var newName = rgxName.exec(el.className);
+    var input = document.createElement('input');
+    input.className = 'real-input';
+    input.type = 'hidden';
+    input.name = newName[1];
+    el.insertBefore(input, el.firstChild);
+
     for (var i = 0, child; child = el.children[i]; i++) {
         child.maxLength = 1;
         child.addEventListener('focus', function(e) {
@@ -87,14 +96,14 @@ function parseXInput(el) {
             if (this.nextElementSibling) {
                 this.nextElementSibling.focus();
             }
+            input.value = "";
+            var node = this;
+            while (node.previousElementSibling) {
+                input.value = node.value + input.value;
+                node = node.previousElementSibling;
+            }
         });
     }
-    var rgxName = /.*\bname:([A-Za-z0-9_\-]+)\b.*/;
-    var newName = rgxName.exec(el.className);
-    var input = document.createElement('input');
-    input.type='hidden';
-    input.name = newName[1];
-    el.insertBefore(input, el.firstChild);
 }
 
 function updateLayout() {

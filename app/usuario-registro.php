@@ -48,7 +48,6 @@
 
                   <div class='content-view'>
                   <div class='button-row'>
-                  
                   <button type='submit' name='action' value='insertar' class='cta'>Registrar</button>
                   </div>
                   </div>

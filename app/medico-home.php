@@ -3,16 +3,18 @@
 <?php mostrarStruct('header'); ?>
 <main>
     <div class='content-view'>
+        <br>
         <h1>Bienvenido <?=$_SESSION['logged']['nombre']?></h1>
+        <br>
     </div>
-    <div class='panel'>
-        <div class='content-view'>
+    <div class='content-view'>
+        <div class='panel'>
             <h2>Buscar por CURP</h2>
             <form class='form' method='GET' action='app/cartilla.php'>
                 <input type='hidden' name='action' value='buscar-curp' />
                 <div class='input'>
                     <div class='fixed-input name:curp'>
-                        <input type='text' pattern='[A-Z]' />
+                        <input type='text' pattern='[A-Z]' autofocus />
                         <input type='text' pattern='[A-Z]' />
                         <input type='text' pattern='[A-Z]' />
                         <input type='text' pattern='[A-Z]' />

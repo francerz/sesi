@@ -7,35 +7,35 @@
         <form class='form flex' method='POST' action='app/action/medico.php?action=insertar'>
             <div class='input w2'>
                 <label for='txtNombres'>Nombre(s):</label>
-                <input id='txtNombres' name='nombres' required autofocus />
+                <input id='txtNombres' type='text' name='nombres' required autofocus />
             </div>
             <div class='input w2'>
                 <label for='txtApellido1'>Primer apellido:</label>
-                <input id='txtApellido1' name='apellido1' required />
+                <input id='txtApellido1' type='text' name='apellido1' required />
             </div>
             <div class='input w2'>
                 <label for='txtApellido2'>Segundo apellido:</label>
-                <input id='txtApellido2' name='apellido2' required />
+                <input id='txtApellido2' type='text' name='apellido2' required />
             </div>
             <div class='input w1'>
                 <label for='txtCedula'>No. Cédula:</label>
-                <input id='txtCedula' name='cedula' required />
+                <input id='txtCedula' type='text' name='cedula' required />
             </div>
             <div class='input w5'>
                 <label for='txtTitulo'>Título:</label>
-                <input id='txtTitulo' name='titulo' required />
+                <input id='txtTitulo' type='text' name='titulo' required />
             </div>
             <div class='input w2'>
                 <label for='txtEmail'>Correo electrónico:</label>
-                <input id='txtEmail' name='email' required />
+                <input id='txtEmail' type='email' name='email' required />
             </div>
             <div class='input w2'>
                 <label for='txtPassword'>Contraeña de acceso:</label>
-                <input id='txtPassword' name='password' required />
+                <input id='txtPassword' type='password' name='password' required />
             </div>
             <div class='input w2'>
-                <label for='txtPassword2'>Correo electrónico:</label>
-                <input id='txtPassword2' required />
+                <label for='txtPassword2'>Confirmar contraeña:</label>
+                <input id='txtPassword2' type='password' required />
             </div>
             <div class='button-row'>
                 <button type='submit' class='cta'>Registrar</button>
